@@ -69,7 +69,7 @@
         font-size: 1.5rem; 
         color: transparent;
         opacity: 0;  
-        background: linear-gradient(200deg, $couleur-primaire 35%, $couleur-secondaire 65%);    
+            
     }
 
     
@@ -202,19 +202,24 @@
 
       &_icon{
         color: $color-tertiary;
+        transform: rotate(0);
+        transition: transform 600ms;
+
       }
     
 
       &_wrapIcon{
         background-color: #f6f6f6;
         border-radius: 50%;
-        -webkit-animation: tour 3s linear;
-        animation: tour 3s linear forwards;
       }
 
-      &:active &_confirmation {
+      &:hover &_confirmation {
         margin-right: -1rem;
        }
+
+      &:hover &_icon {
+        transform: rotate(360deg);
+      }
 
      }
      

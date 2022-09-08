@@ -40,61 +40,6 @@
     transform: translateY(0px);
   }
 }
-@keyframes efface {
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes grandi-bat {
-  0% {
-    transform: scale3d(0, 0, 1);
-  }
-  33% {
-    transform: scale3d(1, 1, 1);
-  }
-  38% {
-    transform: scale3d(1, 1, 1);
-  }
-  43% {
-    transform: scale3d(1, 1, 1);
-  }
-  48% {
-    transform: scale3d(1, 1, 1);
-  }
-  53% {
-    transform: scale3d(1, 1, 1);
-  }
-  58% {
-    transform: scale3d(1, 1, 1);
-  }
-  63% {
-    transform: scale3d(1, 1, 1);
-  }
-  68% {
-    transform: scale3d(1, 1, 1);
-  }
-  73% {
-    transform: scale3d(1, 1, 1);
-  }
-  78% {
-    transform: scale3d(1, 1, 1);
-  }
-  83% {
-    transform: scale3d(1, 1, 1);
-  }
-  88% {
-    transform: scale3d(1, 1, 1);
-  }
-  95% {
-    transform: scale3d(1, 1, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
 body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -425,31 +370,6 @@ body, html {
 .menu_title {
   font-family: "Shrikhand", "cursive";
 }
-.menu_like {
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  mix-blend-mode: lighten;
-  animation: grandi-bat 1.8s linear forwards;
-}
-.menu_like--vide {
-  padding: 5px 2px 5px 2px;
-  font-size: 1.48rem;
-  background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
-}
-.menu_like--plein {
-  position: absolute;
-  padding: 5px 8px 8px 5px;
-  font-size: 1.5rem;
-  color: transparent;
-  opacity: 0;
-}
 .menu_btn {
   height: 2rem;
   width: 2rem;
@@ -563,15 +483,18 @@ body, html {
 }
 .menuItem_icon {
   color: #99E2D0;
+  transform: rotate(0);
+  transition: transform 600ms;
 }
 .menuItem_wrapIcon {
   background-color: #f6f6f6;
   border-radius: 50%;
-  -webkit-animation: tour 3s linear;
-  animation: tour 3s linear forwards;
 }
-.menuItem:active .menuItem_confirmation {
+.menuItem:hover .menuItem_confirmation {
   margin-right: -1rem;
+}
+.menuItem:hover .menuItem_icon {
+  transform: rotate(360deg);
 }
 
 .wrapBtn {

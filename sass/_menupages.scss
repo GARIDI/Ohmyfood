@@ -55,21 +55,17 @@
       align-items:center;
       justify-content:center;
       mix-blend-mode: lighten;
-      animation: grandi-bat 1.8s linear forwards;
-
-      
+     
        &--vide{
         padding: 5px 2px 5px 2px;
         font-size: 1.48rem; 
        }
 
        &--plein{
-        position: absolute;
+        opacity: 0;
         padding: 5px 8px 8px 5px;
         font-size: 1.5rem; 
-        color: transparent;
-        opacity: 0;  
-            
+        color: $color-primary;         
     }
 
     

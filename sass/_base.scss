@@ -6,6 +6,17 @@ body, html {
   scroll-behavior: smooth;
 }
 
+%flex-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@mixin gradient($degree) {
+  background: $color-primary;
+  background:linear-gradient(($degree), $color-primary 25%, $color-secondary 100%);
+}
+
 @mixin button($type) {
   border: 0;
   padding: 0.75rem 1.5rem;

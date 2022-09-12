@@ -7,6 +7,13 @@
     }
  }
 
+ @keyframes end {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
  @keyframes tour{
     0%{transform: rotateZ(0deg);}
     100%{transform: rotateZ(360deg);}

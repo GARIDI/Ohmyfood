@@ -209,23 +209,6 @@
     justify-content: center;
 
   }
-  &_like {
-    background-color: white!important;
-  }
-
+  
 }
 
-.chargement{
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid $color-primary;
-  border-bottom: 10px solid $color-secondary;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  -webkit-animation: spin 1.3s linear;
-  -o-animation: spin 1.3s linear infinite;
-  animation: spin 1.3s linear infinite;
-  margin: auto;
-  position: absolute;
-  top : 0; left: 0; right: 0; bottom: 0;
-}

@@ -1,0 +1,56 @@
+.loader {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    @extend %flex-center;
+  
+    background-color: rgba(255, 255, 255, 0.9);
+  
+    &__circle--1 {
+      width: 9rem;
+      height: 9rem;
+  
+      border-radius: 6rem;
+      border: 1rem solid transparent;
+      border-top-color: $color-primary;
+  
+      animation: spin 1s linear infinite;
+  
+      position: absolute; 
+      margin:auto;
+    }
+  
+    &__circle--2 {
+      width: 7rem;
+      height: 7rem;
+  
+      border-radius: 5rem;
+      border: 1rem solid transparent;
+      border-top-color: $color-secondary;
+  
+      animation: spin 1.25s linear infinite;
+  
+      position: absolute;
+      margin: auto;
+    }
+    
+    &__circle--3 {
+      width: 3rem;
+      height: 3rem;
+  
+      border-radius: 5rem;
+      border: 1rem solid transparent;
+      border-top-color: $color-tertiary;
+  
+      animation: spin 1.5s linear infinite;
+      
+      position: absolute;
+      margin: auto;
+    }
+  }
+  
+  .disappear {
+    animation: end 2s forwards;
+    animation-delay: 1s;
+  }

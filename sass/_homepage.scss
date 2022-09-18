@@ -16,7 +16,7 @@
   justify-content: center;
   padding: 1rem $appPadding;
   background-color: rgb(243, 243, 243);
-  font-size: -1.8rem;
+  font-size: 1rem;
   position: relative;
  
 
@@ -197,18 +197,33 @@
   &_subtitle {
     margin: 0;
   }
-
-  &_btn {
-    height: 2rem;
-    width: 2rem;
-    background-color: transparent;
-    border: transparent 0px solid;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ }
+ .heart {
+  position: relative;
+  
+  & i {
+  font-size: 1.5rem;
+  }
+  
+  & .fas {
+    position:absolute;
+    opacity: 0;
+    @include gradient (180deg);
+    cursor:pointer;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
 
   }
   
+  &:hover .fas {
+    transition: all 400ms ease-in;
+    display: inline;
+    opacity: 1;
+  }
+  
+  &:hover .far {
+    transition: all 400ms ease-in;
+    opacity: 0;
+  }
 }
-

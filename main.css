@@ -35,17 +35,6 @@
     opacity: 1;
   }
 }
-@keyframes colle {
-  0% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -130,7 +119,7 @@ body, html {
   justify-content: center;
   padding: 1rem 1rem;
   background-color: rgb(243, 243, 243);
-  font-size: -1.8rem;
+  font-size: 1rem;
   position: relative;
 }
 .localisation_icon {
@@ -310,15 +299,31 @@ body, html {
 .card_subtitle {
   margin: 0;
 }
-.card_btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.heart {
+  position: relative;
+}
+.heart i {
+  font-size: 1.5rem;
+}
+.heart .fas {
+  position: absolute;
+  opacity: 0;
+  background: #9356DC;
+  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 100%);
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart:hover .fas {
+  transition: all 400ms ease-in;
+  display: inline;
+  opacity: 1;
+}
+.heart:hover .far {
+  transition: all 400ms ease-in;
+  opacity: 0;
 }
 
 .header--withBackArrow {
@@ -360,19 +365,6 @@ body, html {
 }
 .menu_title {
   font-family: "Shrikhand", "cursive";
-}
-.menu_btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: black;
 }
 
 .submenus {
@@ -499,32 +491,6 @@ body, html {
 .commandBtn a {
   text-decoration: none;
   color: inherit;
-}
-
-.heart {
-  position: relative;
-}
-.heart i {
-  font-size: 1.5rem;
-}
-.heart .fas {
-  position: absolute;
-  opacity: 0;
-  background: #9356DC;
-  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 100%);
-  cursor: pointer;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.heart:hover .fas {
-  transition: all 400ms ease-in;
-  display: inline;
-  opacity: 1;
-}
-.heart:hover .far {
-  transition: all 400ms ease-in;
-  opacity: 0;
 }
 
 .loader {
